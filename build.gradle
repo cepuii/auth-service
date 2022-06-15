@@ -6,7 +6,6 @@ plugins {
 
 group = 'edu.cepuii'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
 
 configurations {
     compileOnly {
@@ -24,6 +23,8 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
+
 }
 
 tasks.named('test') {
