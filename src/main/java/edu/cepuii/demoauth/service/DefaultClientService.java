@@ -29,7 +29,7 @@ public class DefaultClientService implements ClientService {
     ClientEntity clientEntity = optionalClientEntity
         .orElseThrow(
             () -> new IllegalArgumentException("Client with id:" + clientId + " not found"));
-    if (!BCrypt.checkpw(clientSecret, clientEntity.getHash())){
+    if (!BCrypt.checkpw(clientSecret, clientEntity.getHash())) {
       throw new IllegalArgumentException("Secret is incorrect");
     }
   }
