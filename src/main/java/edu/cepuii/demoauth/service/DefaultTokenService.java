@@ -22,7 +22,7 @@ public class DefaultTokenService implements TockenService{
     Instant exp = now.plus(5, ChronoUnit.MINUTES);
     
     return JWT.create()
-        .withIssuer("auth-servise")
+        .withIssuer("auth-service")
         .withAudience("bookstore")
         .withSubject(clientId)
         .withIssuedAt(Date.from(now))
